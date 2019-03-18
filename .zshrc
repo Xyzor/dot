@@ -2,6 +2,7 @@
 alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
 # Solarized colorscheme for ls
+# @source https://github.com/Anthony25/gnome-terminal-colors-solarized
 if [ -f ~/.dir_colors/dircolors ]
     then eval `dircolors ~/.dir_colors/dircolors`
 fi
