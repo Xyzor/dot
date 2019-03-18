@@ -1,13 +1,14 @@
+###############
+### Aliases ###
+###############
+
 # Alias .dot bare repo manager command
 alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
-# Solarized colorscheme for ls
-# @source https://github.com/Anthony25/gnome-terminal-colors-solarized
-if [ -f ~/.dir_colors/dircolors ]
-    then eval `dircolors ~/.dir_colors/dircolors`
-fi
+# Git
+alias g='git'
 
-# So as not to be disturbed by Ctrl-S ctrl-Q in terminals: (because of vim)
+# Not to be disturbed by Ctrl-S ctrl-Q in terminals: (because of vim)
 stty -ixon
 
 #######################
@@ -122,3 +123,9 @@ function fg-bg() {
 }
 zle -N fg-bg
 bindkey '^Z' fg-bg
+
+# Solarized colorscheme for ls
+# @source https://github.com/Anthony25/gnome-terminal-colors-solarized
+if [ -f ~/.dir_colors/dircolors ]
+    then eval `dircolors ~/.dir_colors/dircolors`
+fi
