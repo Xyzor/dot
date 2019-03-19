@@ -163,7 +163,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # Network tray icon
 #exec --no-startup-id nm-applet
 
-set $Locker i3lock && sleep 1
+set $Locker i3lock -c 000000 -e -f && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
