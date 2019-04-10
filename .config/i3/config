@@ -138,6 +138,9 @@ bindsym XF86AudioPrev exec playerctl previous
 # Monitor Brightness
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
+# Take Screenshot
+#bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Print exec gnome-screenshot -i
 
 # reload the configuration file
 bindsym $mod+Ctrl+c reload
