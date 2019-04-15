@@ -339,7 +339,9 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.foreground}
+ramp-capacity-2-foreground = ${colors.orange}
+ramp-capacity-3-foreground = ${colors.foreground}
+ramp-capacity-4-foreground = ${colors.foreground}
 
 animation-charging-0 = 
 animation-charging-1 = 
