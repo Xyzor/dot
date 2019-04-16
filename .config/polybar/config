@@ -136,7 +136,7 @@ font-1 = "Font Awesome 5 Free:style=Regular;size=12;0"
 
 modules-left = i3 xwindow
 modules-center = 
-modules-right = wired-network battery date
+modules-right = wired-network pulseaudio battery date
 
 separator = |
 
@@ -370,6 +370,52 @@ format-underline =
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %date% %time%
+
+################################################################################
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+;use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <label-volume>
+format-volume-background = ${colors.background}
+format-volume-foreground = ${colors.foreground}
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-muted = <label-muted>
+format-muted-background = ${colors.background}
+format-muted-foreground = ${colors.foreground}
+
+; Available tokens:
+;   %percentage% (default)
+label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+label-muted = 🔇 muted
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
 
 ################################################################################
 
