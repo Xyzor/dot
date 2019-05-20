@@ -49,7 +49,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_basename dir_writable)
@@ -112,6 +112,11 @@ source $ZSH/oh-my-zsh.sh
 ###############
 ### Scripts ###
 ###############
+
+# Vi mode
+# bindkey -v
+# By default, there is a 0.4 second delay after you hit the <ESC> key and when the mode change is registered. This results in a very jarring and frustrating transition between modes. Let's reduce this delay to 0.1 seconds.
+# export KEYTIMOUT=0
 
 # Makes ^Z to foreground programs
 function fg-bg() {
