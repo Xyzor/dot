@@ -136,7 +136,7 @@ font-1 = "Font Awesome 5 Free:style=Regular;size=12;0"
 
 modules-left = i3 xwindow
 modules-center = 
-modules-right = wired-network pulseaudio battery date
+modules-right = wireless-network wired-network pulseaudio battery date
 
 separator = |
 
@@ -363,7 +363,7 @@ interval = 5
 date = " %Y-%m-%d%"
 date-alt = " %Y-%m-%d%"
 time = %H:%M
-time-alt = %H:%M
+time-alt = %H:%M:%S
 format-prefix = " "
 format-prefix-foreground = #c1941a
 format-underline =
@@ -425,7 +425,7 @@ interface = enp8s0
 ;
 ;[module/wireless-network]
 ;type = internal/network
-;interface = wlan1
+;interface = wlp7s0
 ;
 ;[module/network]
 ;type = internal/network
