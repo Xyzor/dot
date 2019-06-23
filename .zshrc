@@ -134,3 +134,5 @@ bindkey '^Z' fg-bg
 if [ -f ~/.dir_colors/dircolors ]
     then eval `dircolors ~/.dir_colors/dircolors`
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
